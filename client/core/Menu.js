@@ -26,7 +26,7 @@ const Menu = withRouter(({history}) => (
         </Link>
       </div>
       <Typography type="title" color="inherit">
-        BIET - evcm MERN
+        BIET - Enterprise Video Content Management System
       </Typography>
       
       <div style={{'position':'absolute', 'right': '10px'}}><span style={{'float': 'right'}}>
