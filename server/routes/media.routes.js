@@ -9,7 +9,7 @@ router.route('/api/media/new/:userId')
     .post(authCtrl.requireSignin, mediaCtrl.create)
 
 router.route('/api/media/video/:mediaId')
-    .get(mediaCtrl.video)
+    .get(mediaCtrl.incrementViews, mediaCtrl.video)
 
 router.route('/api/media/popular')
     .get(mediaCtrl.listPopular)
@@ -21,7 +21,7 @@ router.route('/api/media/by/:userId')
     .get(mediaCtrl.listByUser)
 
 router.route('/api/media/:mediaId')
-    .get( mediaCtrl.incrementViews, mediaCtrl.read)
+    .get(mediaCtrl.read)
     .put(authCtrl.requireSignin, mediaCtrl.isPoster, mediaCtrl.update)
     .delete(authCtrl.requireSignin, mediaCtrl.isPoster, mediaCtrl.remove)
 
