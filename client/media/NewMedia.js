@@ -18,12 +18,14 @@ const useStyles = makeStyles(theme => ({
     margin: 'auto',
     textAlign: 'center',
     marginTop: theme.spacing(5),
-    paddingBottom: theme.spacing(2)
+    paddingBottom: theme.spacing(2),
+   
   },
   title: {
-    margin: theme.spacing(2),
+    margin: theme.spacing(1),
     color: theme.palette.protectedTitle,
-    fontSize: '1em'
+    fontSize: '2em',
+    color: '#263137'
   },
   error: {
     verticalAlign: 'middle'
@@ -52,6 +54,7 @@ export default function NewMedia(){
       video: '',
       description: '',
       genre: '',
+      attachment: '',
       redirect: false,
       error: '',
       mediaId: ''
@@ -64,6 +67,7 @@ export default function NewMedia(){
     values.video && mediaData.append('video', values.video)
     values.description && mediaData.append('description', values.description)
     values.genre && mediaData.append('genre', values.genre)
+    values.attachment && mediaData.append('attachment', values.attachment)
     create({
       userId: jwt.user._id
     }, {
@@ -78,10 +82,23 @@ export default function NewMedia(){
   }
 
   const handleChange = name => event => {
-    const value = name === 'video'
+    if(name === 'video'){
+      const value = name === 'video'
       ? event.target.files[0]
       : event.target.value
+      setValues({...values, [name]: value })
+    }
+    if(name === 'attachment'){
+      const value = name === 'attachment'
+      ? event.target.files[0]
+      : event.target.value
+      setValues({...values, [name]: value })
+    }
+    else {const value = name === 'video'
+    ? event.target.files[0]
+    : event.target.value
     setValues({...values, [name]: value })
+  }
   }
 
     if (values.redirect) {
@@ -91,12 +108,12 @@ export default function NewMedia(){
       <Card className={classes.card}>
         <CardContent>
           <Typography type="headline" component="h1" className={classes.title}>
-            New Video
+            NEW VIDEO
           </Typography>
           <input accept="video/*" onChange={handleChange('video')} className={classes.input} id="icon-button-file" type="file" />
           <label htmlFor="icon-button-file">
             <Button color="secondary" variant="contained" component="span">
-              Upload
+              Upload Video &nbsp;&nbsp;
               <FileUpload/>
             </Button>
           </label> <span className={classes.filename}>{values.video ? values.video.name : ''}</span><br/>
@@ -111,7 +128,19 @@ export default function NewMedia(){
             className={classes.textField}
             margin="normal"
           /><br/>
-          <TextField id="genre" label="Genre" className={classes.textField} value={values.genre} onChange={handleChange('genre')} margin="normal"/><br/>
+          <TextField id="genre" label="Subject" className={classes.textField} value={values.genre} onChange={handleChange('genre')} margin="normal"/><br/>
+          <br/>
+          <Typography type="headline" component="h6" className={classes.attch}>
+            ATTACHMENT
+            <br />
+          </Typography>
+          <input accept="image/*,audio/*,.pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" onChange={handleChange('attachment')} className={classes.input} id="icon-button-attachment" type="file" />
+          <label htmlFor="icon-button-attachment">
+            <Button color="secondary" variant="contained" component="span">
+              Add
+            </Button>
+          </label>
+          <span className={classes.filename}>{values.attachment ? values.attachment.name : ''}</span><br/>
           <br/> {
                   values.error && (<Typography component="p" color="error">
                       <Icon color="error" className={classes.error}>error</Icon>
@@ -120,7 +149,7 @@ export default function NewMedia(){
                 }
         </CardContent>
         <CardActions>
-          <Button color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Submit</Button>
+          <Button fullWidth={true} color="primary" variant="contained" onClick={clickSubmit} className={classes.submit}>Submit</Button>
         </CardActions>
       </Card>
     )

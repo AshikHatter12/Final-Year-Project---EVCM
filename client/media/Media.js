@@ -16,6 +16,7 @@ import {Link} from 'react-router-dom'
 import Divider from '@material-ui/core/Divider'
 import DeleteMedia from './DeleteMedia'
 import MediaPlayer from './MediaPlayer'
+import Typography from '@material-ui/core/Typography'
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -42,6 +43,9 @@ export default function Media(props) {
         ? `/api/media/video/${props.media._id}`
         : null
   const nextUrl = props.nextUrl
+  const attachmentUrl = props.media._id
+  ? `/api/media/attachment/${props.media._id}`
+  : null
   return (
     <Card className={classes.card}>
       <CardHeader className={classes.header}
@@ -77,6 +81,13 @@ export default function Media(props) {
         <ListItem>
           <ListItemText primary={props.media.description}/>
         </ListItem>
+        <ListItem>
+          <Typography type="headline" component="h6">
+            ATTACHMENTS:
+            <br />
+            <a href={attachmentUrl} target="_blank">View/Download File</a>
+          </Typography>
+          </ListItem>
       </List>
     </Card>)
 }

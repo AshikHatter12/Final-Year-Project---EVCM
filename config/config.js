@@ -9,6 +9,7 @@ const config = {
   //   (process.env.MONGO_PORT || '27017') +
   //   '/mernproject',
   serverUrl: process.env.serverUrl || 'https://biet-evcm.herokuapp.com'
+  // serverUrl: process.env.serverUrl || 'http://localhost:3000'
 }
 
 export default config

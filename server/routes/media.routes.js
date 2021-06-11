@@ -11,6 +11,9 @@ router.route('/api/media/new/:userId')
 router.route('/api/media/video/:mediaId')
     .get(mediaCtrl.incrementViews, mediaCtrl.video)
 
+router.route('/api/media/attachment/:attachmentId')
+    .get(mediaCtrl.attachment)
+
 router.route('/api/media/popular')
     .get(mediaCtrl.listPopular)
 
@@ -27,5 +30,5 @@ router.route('/api/media/:mediaId')
 
 router.param('userId', userCtrl.userByID)
 router.param('mediaId', mediaCtrl.mediaByID)
-
+router.param('attachmentId',mediaCtrl.mediaByAttachmentId )
 export default router
