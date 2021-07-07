@@ -101,10 +101,10 @@ export default function Home(){
         {/* Hero unit */}
         <div className={classes.heroContent}>
           <Container maxWidth="sm">
-            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+            <Typography component="h1" variant="h5" align="center" color="textPrimary" gutterBottom>
               B.I.E.T Video Library
             </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+            <Typography variant="h7" align="center" color="textSecondary" paragraph>
               Access to all the academic video content to learn whenever necessary at ease from any part of the world.   
             </Typography>
           </Container>
