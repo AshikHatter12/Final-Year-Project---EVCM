@@ -35,7 +35,7 @@ export default function Welcome() {
         <Typography variant="h5" style={{ marginLeft: '2vh' }} gutterBottom>
         BAPUJI INSTITUTE OF ENGINEERING & TECHNOLOGY, DAVANGERE
       </Typography>
-        <Typography component="div" variant="h6" style={{ padding: '2vh' }}>
+        <Typography component="div" variant="h4" style={{ padding: '2vh' }}>
         Bapuji Educational Association (BEA) is a conglomerate of over 50 educational institutions across the city of Davangere. 
         The Association was established in the year 1958 with the inception of a first grade college in Davangere. 
         Two medical colleges, two dental colleges, an engineering college - Bapuji Institute of Engineering & Technology (BIET) 
