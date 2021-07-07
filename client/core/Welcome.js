@@ -32,17 +32,17 @@ export default function Welcome() {
         </Grid>
         <Grid item xs={12} sm={6}>
         <Container maxWidth="md">
-        <Typography variant="h4" style={{ marginLeft: '2vh' }} gutterBottom>
-        BAPUJI INSTITUTE OF ENGINEERING & TECHNOLOGY, DAVANGERE
+        <Typography variant="h5" style={{ marginLeft: '2vh' }} gutterBottom>
+        BAPUJI INSTITUTE OF ENGINEERING & TECHNOLOGY
+        DAVANGERE
       </Typography>
         <Typography component="div" variant="h8" style={{ padding: '2vh' }}>
         Bapuji Educational Association (BEA) is a conglomerate of over 50 educational institutions across the city of Davangere. 
         The Association was established in the year 1958 with the inception of a first grade college in Davangere. 
-        Two medical colleges, two dental colleges, an engineering college - Bapuji Institute of Engineering & Technology (BIET) 
-        and numerous other colleges are associated with association. The Bapuji Educational Association is one of the oldest and
-        most prestigious educational associations in Karnataka. Today the association has grown to be a big tree,
-        like the banyan, with all its twigs and branches. It runs schools and colleges right from Nursery to Post Graduate courses, 
-        from Diploma to Engineering, Nursing to Medical.
+        Team BIET is headed by Professor Y. Vrushabhendrappa, Director and Dr. H.B. Aravind, Principal. 
+        They are assisted by Dr. S. Suresh, Dean-Student Welfare, Dr. B. E. Rangaswamy, Dean-Research and Development, Dr. K Sadashivappa, Dean-Academics, 
+        Dr. M. S. Nagaraja, Dean-Training and Placement, Dr. S. Kumarappa, Dean-Examinations, Dr. G.P Desai, Dean-Public Relation,
+        and all the Heads of the Departments.
          </Typography>
       </Container>
         </Grid>
