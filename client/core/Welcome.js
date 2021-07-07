@@ -33,7 +33,7 @@ export default function Welcome() {
         <Grid item xs={12} sm={6}>
         <Container maxWidth="md">
         <Typography variant="h5" style={{ marginLeft: '2vh' }} gutterBottom>
-        Bapuji Institute of Engineering & Technology, Davanagere
+        BAPUJI INSTITUTE OF ENGINEERING & TECHNOLOGY, DAVANGERE
       </Typography>
         <Typography component="div" variant="h6" style={{ padding: '2vh' }}>
         Bapuji Educational Association (BEA) is a conglomerate of over 50 educational institutions across the city of Davangere. 
