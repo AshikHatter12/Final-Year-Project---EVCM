@@ -14,7 +14,7 @@ function Copyright() {
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://www.bietdvg.edu/">
-        BIET DVG Enterprise Video Content Management
+        BIET DVG Enterprise Video Content Management 2
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
